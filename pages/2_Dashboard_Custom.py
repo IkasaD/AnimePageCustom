@@ -58,18 +58,26 @@ if agree:
 
     
         values = st.slider(
-        'Select width', float(width))
+        'TEXT FROM SIDE', float(width))
         st.write('Values:', values)
         value = st.slider(
-        'Select height', float(height))
+        'TEXT FROM TOP', float(height))
         st.write('Values:', value)
         option = st.selectbox(
         'Change Font',
-        ('Black Italic','Extra Bold'))
+        ('Black Italic','Extra Bold','Inconsolata Bold','CrimsonText Regular','RubikDistressed Regular','Pacifico Regular'))
         if option == "Black Italic":
             FONT_PATH = os.path.join(dir_of_interest, "font", "BlackItalic.ttf")
         elif option == "Extra Bold":
             FONT_PATH = os.path.join(dir_of_interest, "font", "ExtraBold.ttf")
+        elif option == "Inconsolata Bold":
+            FONT_PATH = os.path.join(dir_of_interest, "font", "Inconsolata-Bold.ttf")
+        elif option == "CrimsonText Regular":
+            FONT_PATH = os.path.join(dir_of_interest, "font", "CrimsonText-Regular.ttf")
+        elif option == "RubikDistressed Regular":
+            FONT_PATH = os.path.join(dir_of_interest, "font", "RubikDistressed-Regular.ttf")
+        elif option == "Pacifico Regular":
+            FONT_PATH = os.path.join(dir_of_interest, "font", "Pacifico-Regular.ttf")
     
     if st.button('Submit'):
         st.success('Sucess!!!!!!', icon="✅")
